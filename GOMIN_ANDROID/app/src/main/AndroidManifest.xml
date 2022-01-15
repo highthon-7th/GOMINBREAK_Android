@@ -15,6 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GOMIN">
         <activity
+            android:name=".ui.EditInfoActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.MyGominsActivity"
             android:exported="false" />
         <activity

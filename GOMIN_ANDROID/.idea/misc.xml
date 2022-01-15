@@ -15,6 +15,7 @@
         <entry key="app/src/main/res/drawable/ic_rank.xml" value="0.16510416666666666" />
         <entry key="app/src/main/res/drawable/item_rank_header.xml" value="0.21388888888888888" />
         <entry key="app/src/main/res/drawable/selector_bottomic_color.xml" value="0.18425925925925926" />
+        <entry key="app/src/main/res/layout/activity_edit_myinfo.xml" value="0.14895833333333333" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.2682291666666667" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2572463768115942" />
         <entry key="app/src/main/res/layout/activity_my_gomins.xml" value="0.14895833333333333" />
