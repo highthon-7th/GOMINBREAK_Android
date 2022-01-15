@@ -49,6 +49,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:hint="아이디"
+            android:text="@={vm.userId}"
             app:layout_constraintBottom_toTopOf="@id/login_password_et"
             app:layout_constraintEnd_toEndOf="@id/login_password_et"
             app:layout_constraintStart_toStartOf="@id/login_password_et" />
@@ -59,6 +60,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="70dp"
             android:hint="비밀번호"
+            android:text="@={vm.password}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
