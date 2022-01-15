@@ -1,4 +1,4 @@
-package com.example.gomin.ui
+package com.example.gomin.ui.rank
 
 import com.example.gomin.R
 import com.example.gomin.base.BaseFragment

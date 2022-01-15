@@ -12,7 +12,7 @@
 
     <fragment
         android:id="@+id/rank_fragment"
-        android:name="com.example.gomin.ui.RankFragment"
+        android:name="com.example.gomin.ui.rank.RankFragment"
         android:label="mealFragment"
         tools:layout="@layout/fragment_rank" />
 
