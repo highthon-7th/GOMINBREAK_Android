@@ -6,7 +6,7 @@ import org.koin.dsl.module
 import retrofit2.Retrofit
 
 val myPageModule = module {
+
     single { get<Retrofit>().create(MyPageApi::class.java) }
     single { MyPageRepository(get()) }
-    
 }
