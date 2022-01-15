@@ -12,7 +12,7 @@ class MyPageViewModel(private val myPageRepository: MyPageRepository) : ViewMode
     val myPageInfo: LiveData<MyInfoEntity> = _myPageInfo
 
 
-    fun getMyPageInfo() {
+    fun getMyPageInformation() {
         myPageRepository.getMyPageInfo().subscribe { response ->
             if (response.isSuccessful) {
                 _myPageInfo.value = response.body()!!

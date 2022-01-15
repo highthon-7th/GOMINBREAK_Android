@@ -10,7 +10,7 @@ import retrofit2.Retrofit
 
 val loginModule = module {
     single<LoginApi> { get<Retrofit>().create(LoginApi::class.java) }
-    single { LoginRepository(get()) }
+    single { LoginRepository(get(), get()) }
     viewModel { LoginViewModel(get()) }
     viewModel { RegisterViewModel(get()) }
 }
