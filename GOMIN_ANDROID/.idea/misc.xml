@@ -23,6 +23,7 @@
         <entry key="app/src/main/res/layout/fragment_gomin.xml" value="0.28229166666666666" />
         <entry key="app/src/main/res/layout/fragment_mypage.xml" value="0.17707824286156632" />
         <entry key="app/src/main/res/layout/fragment_rank.xml" value="0.28229166666666666" />
+        <entry key="app/src/main/res/layout/fragment_school.xml" value="0.2682291666666667" />
         <entry key="app/src/main/res/layout/fragment_student.xml" value="0.28229166666666666" />
         <entry key="app/src/main/res/layout/item_my_gomin.xml" value="0.1" />
         <entry key="app/src/main/res/layout/item_rank.xml" value="0.28229166666666666" />
