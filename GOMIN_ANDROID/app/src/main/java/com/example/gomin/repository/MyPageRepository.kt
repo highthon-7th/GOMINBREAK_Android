@@ -8,7 +8,7 @@ import io.reactivex.rxjava3.schedulers.Schedulers
 import retrofit2.Response
 
 class MyPageRepository(private val myPageApi: MyPageApi) {
-    
+
     fun getMyPageInfo(): Single<Response<MyInfoEntity>> =
         myPageApi.getUserInfo().subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
