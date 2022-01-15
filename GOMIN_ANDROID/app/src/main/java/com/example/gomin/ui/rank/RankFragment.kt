@@ -12,7 +12,7 @@ class RankFragment : BaseFragment<FragmentRankBinding>(R.layout.fragment_rank) {
     override val vm: RankViewModel by viewModel()
 
     companion object {
-        private val titleList = arrayListOf("포토앨범", "공지사항", "가정통신문")
+        private val titleList = arrayListOf("학생 순위", "학교 순위")
     }
 
     override fun observeEvent() {

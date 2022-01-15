@@ -76,16 +76,35 @@ class RankViewModel : ViewModel() {
     )
 
     init {
-        getStudentRank()
-        getSchoolRank()
+        getStudentRankList()
+        getSchoolRankList()
     }
 
-    private fun getStudentRank() {
+    private fun getSchoolRankList() {
         _schoolRankItems.value = ArrayList<RecyclerViewItem>().apply {
             add(
                 RecyclerViewItem(
                     R.layout.item_rank_header,
                     HeaderRank(schoolList[0], schoolList[1], schoolList[2]),
+                    BR.vm
+                )
+            )
+            addAll(schoolList.map {
+                RecyclerViewItem(
+                    R.layout.item_rank,
+                    it,
+                    BR.vm
+                )
+            })
+        }
+    }
+
+    private fun getStudentRankList() {
+        _studentRankItems.value = ArrayList<RecyclerViewItem>().apply {
+            add(
+                RecyclerViewItem(
+                    R.layout.item_rank_header,
+                    HeaderRank(studentList[0], studentList[1], studentList[2]),
                     BR.vm
                 )
             )
@@ -97,10 +116,6 @@ class RankViewModel : ViewModel() {
                 )
             })
         }
-    }
-
-    private fun getSchoolRank() {
-
     }
 
     data class Rank(val name: String, val count: Int, val imageUrl: String)
