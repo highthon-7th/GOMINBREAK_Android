@@ -58,6 +58,7 @@ dependencies {
     implementation("io.reactivex.rxjava2:rxkotlin:2.4.0")
 
     implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava3:2.9.0'
 
     // Gson
     implementation 'com.google.code.gson:gson:2.8.6'
@@ -87,5 +88,8 @@ dependencies {
     implementation "org.koin:koin-androidx-viewmodel:$koin_version"
     androidTestImplementation "org.koin:koin-test:$koin_version"
 
+    //jetpack data store
+    implementation "androidx.datastore:datastore-rxjava3:1.0.0"
+    implementation "androidx.datastore:datastore-preferences-rxjava3:1.0.0"
 
 }

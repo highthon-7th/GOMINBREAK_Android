@@ -17,17 +17,17 @@ class RegisterActivity : BaseActivity<ActivityRegisterBinding>(R.layout.activity
                 finish()
             }
             registerBtn.setOnClickListener {
-                vm.register()
+                vm?.register()
             }
-            vm.doneRegister.observe(this@RegisterActivity, {
+            vm?.doneRegister?.observe(this@RegisterActivity, {
                 Snackbar.make(binding.root, "회원가입을 완료하였습니다", Snackbar.LENGTH_SHORT).show()
                 finish()
             })
-            vm.checkPassword.observe(this@RegisterActivity, {
+            vm?.checkPassword?.observe(this@RegisterActivity, {
                 binding.checkPasswordError.visibility =
                     if (
-                        !vm.password.value.isNullOrEmpty()
-                        && vm.password.value == it
+                        !vm?.password?.value.isNullOrEmpty()
+                        && vm?.password?.value == it
                         && !it.isNullOrEmpty()
                     ) View.INVISIBLE
                     else View.VISIBLE
