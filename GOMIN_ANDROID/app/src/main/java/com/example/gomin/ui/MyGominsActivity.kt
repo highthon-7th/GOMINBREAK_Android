@@ -10,6 +10,9 @@ class MyGominsActivity : BaseActivity<ActivityMyGominsBinding>(R.layout.activity
     override val vm: MyGominsViewModel by viewModel()
 
     override fun observeEvent() {
-
+        binding.myGominTb.setNavigationOnClickListener {
+            finish()
+        }
+        
     }
 }
