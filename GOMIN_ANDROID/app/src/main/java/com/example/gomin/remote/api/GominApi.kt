@@ -2,6 +2,7 @@ package com.example.gomin.remote.api
 
 import com.example.gomin.dto.GominDetail
 import com.example.gomin.dto.GominList
+import com.example.gomin.dto.GominUpload
 import com.example.gomin.model.SchoolEntity
 import io.reactivex.rxjava3.core.Single
 import retrofit2.Response
@@ -18,5 +19,5 @@ interface GominApi {
     fun showGominListDetail(@Query("gomin-id") id : String): Single<Response<GominDetail>>
 
     @POST("search/{name}")
-    fun gominUpload(title :String,content : String): Single<Void>
+    fun gominUpload(gominUp : GominUpload): Single<Response<Unit>>
 }

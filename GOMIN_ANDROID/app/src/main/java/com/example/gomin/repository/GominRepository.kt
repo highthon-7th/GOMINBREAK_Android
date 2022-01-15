@@ -2,6 +2,7 @@ package com.example.gomin.repository
 
 import com.example.gomin.dto.GominDetail
 import com.example.gomin.dto.GominList
+import com.example.gomin.dto.GominUpload
 import com.example.gomin.remote.api.GominApi
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.annotations.NonNull
@@ -20,7 +21,7 @@ class GominRepository(private val gominApi: GominApi) {
         gominApi.showGominListDetail(gomin).subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
 
-    fun gominUpload(title : String, content : String): @NonNull Single<Void> =
-        gominApi.gominUpload(title,content).subscribeOn(Schedulers.io())
+    fun gominUpload(gominUp : GominUpload): @NonNull Single<Response<Unit>> =
+        gominApi.gominUpload(gominUp).subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
 }
