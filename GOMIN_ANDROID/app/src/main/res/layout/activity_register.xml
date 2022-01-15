@@ -25,8 +25,8 @@
             <TextView
                 android:id="@+id/register_back_btn"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
+                android:layout_height="match_parent"
+                android:padding="10dp"
                 android:text="뒤로" />
 
             <androidx.appcompat.widget.AppCompatTextView
