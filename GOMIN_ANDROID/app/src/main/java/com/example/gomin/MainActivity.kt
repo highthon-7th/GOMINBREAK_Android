@@ -1,9 +1,6 @@
 package com.example.gomin
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import androidx.lifecycle.ViewModel
 import androidx.navigation.Navigation
 import androidx.navigation.ui.setupWithNavController
 import com.example.gomin.base.BaseActivity
@@ -23,7 +20,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
             )
         )
         vm.startLogin.observe(this, {
-            startLogin()
+            //startLogin()
         })
     }
 
