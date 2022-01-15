@@ -17,15 +17,16 @@ class RegisterViewModel(private val repository: LoginRepository): ViewModel() {
 
     val checkPassword = MutableLiveData<String>()
 
-    val schoolName = MutableLiveData<String>()
+    private val _selectedSchoolName = SingleLiveEvent<String>()
+    val selectedSchoolName: LiveData<String> = _selectedSchoolName
 
     val doneRegister = SingleLiveEvent<Unit>()
 
-    private val _schools = MutableLiveData<List<SchoolEntity>>()
-    val schools: LiveData<List<SchoolEntity>> = _schools
+    private val _searchSchoolRecyclerItems = MutableLiveData<List<SearchSchoolItemViewModel>>()
+    val searchSchoolRecyclerViewItems: LiveData<List<SearchSchoolItemViewModel>> = _searchSchoolRecyclerItems
 
     fun register() {
-        val request = RegisterEntity(userName.value!!, schoolName.value!!, userId.value!!, password.value!!)
+        val request = RegisterEntity(userName.value!!, selectedSchoolName.value!!, userId.value!!, password.value!!)
         repository.register(request).subscribe { response ->
             if(response.isSuccessful) {
                 doneRegister.call()
@@ -36,8 +37,14 @@ class RegisterViewModel(private val repository: LoginRepository): ViewModel() {
     fun searchSchool(name: String) {
         repository.searchSchool(name).subscribe { response ->
             if(response.body() != null) {
-                _schools.value = response.body()
+                _searchSchoolRecyclerItems.value = response.body()!!.map { SearchSchoolItemViewModel(it) }
             }
+        }
+    }
+
+    inner class SearchSchoolItemViewModel(private val data: SchoolEntity, private val viewModel: RegisterViewModel = this) {
+        fun selectSchool() {
+            viewModel._selectedSchoolName.value = data.name
         }
     }
 }
