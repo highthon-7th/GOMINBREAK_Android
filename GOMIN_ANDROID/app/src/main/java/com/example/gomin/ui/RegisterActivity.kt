@@ -1,12 +1,17 @@
 package com.example.gomin.ui
 
 import android.view.View
+import android.widget.EditText
+import android.widget.TextView
 import com.example.gomin.R
 import com.example.gomin.base.BaseActivity
 import com.example.gomin.databinding.ActivityRegisterBinding
+import com.example.gomin.ui.dialog.SearchSchoolDialog
 import com.example.gomin.viewmodel.RegisterViewModel
 import com.google.android.material.snackbar.Snackbar
+import com.jakewharton.rxbinding4.widget.textChanges
 import org.koin.androidx.viewmodel.ext.android.viewModel
+import java.util.concurrent.TimeUnit
 
 class RegisterActivity : BaseActivity<ActivityRegisterBinding>(R.layout.activity_register) {
     override val vm: RegisterViewModel by viewModel()
@@ -19,19 +24,27 @@ class RegisterActivity : BaseActivity<ActivityRegisterBinding>(R.layout.activity
             registerBtn.setOnClickListener {
                 vm?.register()
             }
-            vm?.doneRegister?.observe(this@RegisterActivity, {
+            searchCv.setOnClickListener {
+                SearchSchoolDialog(vm!!).show(supportFragmentManager,"searchSchoolDialog")
+            }
+        }
+        vm.run {
+            doneRegister.observe(this@RegisterActivity, {
                 Snackbar.make(binding.root, "회원가입을 완료하였습니다", Snackbar.LENGTH_SHORT).show()
                 finish()
             })
-            vm?.checkPassword?.observe(this@RegisterActivity, {
+
+            checkPassword.observe(this@RegisterActivity, {
                 binding.checkPasswordError.visibility =
-                    if (
-                        !vm?.password?.value.isNullOrEmpty()
-                        && vm?.password?.value == it
-                        && !it.isNullOrEmpty()
-                    ) View.INVISIBLE
-                    else View.VISIBLE
+                    if (isPasswordEntered() && isPasswordDifferent()) View.VISIBLE
+                    else View.INVISIBLE
             })
         }
     }
+
+    private fun isPasswordEntered(): Boolean =
+        !vm.password.value.isNullOrEmpty() && !vm.checkPassword.value.isNullOrEmpty()
+
+    private fun isPasswordDifferent(): Boolean =
+        vm.password.value != vm.checkPassword.value
 }

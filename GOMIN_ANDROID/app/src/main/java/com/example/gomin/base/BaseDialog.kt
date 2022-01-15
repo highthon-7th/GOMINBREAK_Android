@@ -9,6 +9,9 @@ import android.view.ViewGroup
 import androidx.annotation.LayoutRes
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
+import androidx.fragment.app.DialogFragment
+import androidx.lifecycle.ViewModel
+import com.example.gomin.BR
 import androidx.databinding.library.baseAdapters.BR
 import androidx.fragment.app.DialogFragment
 import androidx.lifecycle.ViewModel
@@ -33,6 +36,10 @@ abstract class BaseDialog<B : ViewDataBinding>(@LayoutRes private val layoutResI
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         dialog!!.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        observeEvent()
+    }
+
+    open fun observeEvent(){}
     }
 
 }

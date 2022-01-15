@@ -8,8 +8,12 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
+    <color name="blue_700">#05c5ff</color>
+    <color name="blue_500">#0097c4</color>
     <color name="gomin_blue">#D4F5FF</color>
     <color name="gomin_red">#FFD6D6</color>
+    <color name="gomin_red_500">#F79898</color>
+    <color name="gomin_red_700">#FF6E6E</color>
     <color name="gomin_gray">#8B8B8B</color>
 
     <color name="red">#F72D2A</color>

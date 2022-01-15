@@ -1,20 +1,34 @@
 package com.example.gomin.ui
 
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.content.Intent
 import com.example.gomin.R
+import com.example.gomin.base.BaseFragment
+import com.example.gomin.databinding.FragmentMypageBinding
+import com.example.gomin.viewmodel.MyPageViewModel
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class MyPageFragment : Fragment() {
+class MyPageFragment : BaseFragment<FragmentMypageBinding>(R.layout.fragment_mypage) {
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_mypage, container, false)
+    override val vm: MyPageViewModel by viewModel()
+
+    override fun observeEvent() {
+        binding.gominCountCl.setOnClickListener {
+            startMyGomins()
+        }
+
+        binding.mypageProfileCl.setOnClickListener {
+            startEditProfile()
+        }
+    }
+
+    private fun startMyGomins() {
+        val intent = Intent(requireContext(), MyGominsActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun startEditProfile() {
+        val intent = Intent(requireContext(), EditInfoActivity::class.java)
+        startActivity(intent)
     }
 
 }
