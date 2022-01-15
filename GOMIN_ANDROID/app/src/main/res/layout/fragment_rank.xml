@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -14,7 +14,31 @@
         android:layout_height="match_parent"
         tools:context=".ui.rank.RankFragment">
 
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/rank_tl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tabGravity="center"
+            app:tabIndicatorColor="@color/gomin_red_500"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="@color/gomin_red_500"
+            app:tabTextColor="@color/gomin_gray" />
 
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/rank_vp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rank_tl">
+
+        </androidx.viewpager2.widget.ViewPager2>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
