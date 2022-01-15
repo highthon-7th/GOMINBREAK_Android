@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.example.gomin.viewmodel.RankViewModel.HeaderRank" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/rank_header_first_iv"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            app:civ_border_color="@color/gomin_blue"
+            app:civ_border_width="1dp"
+            app:glide_image_load="@{vm.first.imageUrl}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{vm.first.name}"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@id/rank_header_first_iv"
+            app:layout_constraintStart_toStartOf="@id/rank_header_first_iv"
+            app:layout_constraintTop_toBottomOf="@id/rank_header_first_iv"
+            tools:text="김재원" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/rank_header_second_iv"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            app:civ_border_color="@color/gomin_red"
+            app:civ_border_width="1dp"
+            app:glide_image_load="@{vm.second.imageUrl}"
+            app:layout_constraintBottom_toBottomOf="@id/rank_header_first_iv"
+            app:layout_constraintEnd_toStartOf="@id/rank_header_first_iv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/rank_header_first_iv" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/rank_header_third_iv"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            app:civ_border_color="@color/gomin_red"
+            app:civ_border_width="1dp"
+            app:glide_image_load="@{vm.third.imageUrl}"
+            app:layout_constraintBottom_toBottomOf="@id/rank_header_first_iv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/rank_header_first_iv"
+            app:layout_constraintTop_toTopOf="@id/rank_header_first_iv" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
