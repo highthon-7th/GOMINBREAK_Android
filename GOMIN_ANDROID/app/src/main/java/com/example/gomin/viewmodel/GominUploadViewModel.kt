@@ -16,12 +16,12 @@ class GominUploadViewModel(private val gominRepository: GominRepository) : ViewM
     private val _successedUpload = MutableLiveData(false)
     val successedUpload : LiveData<Boolean> = _successedUpload
 
-    val successUpload = SingleLiveEvent<Unit>()
+    val successUpload = MutableLiveData<Boolean>(false)
 
     fun upload() {
         gominRepository.gominUpload(GominUpload(title.value!!, content.value!!)).subscribe { it->
             if (it.isSuccessful){
-                successUpload.call()
+
                 //TODO
                 //_successedUpload
             }
