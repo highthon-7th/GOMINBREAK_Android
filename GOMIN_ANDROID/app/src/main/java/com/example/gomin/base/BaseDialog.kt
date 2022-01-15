@@ -12,6 +12,9 @@ import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.DialogFragment
 import androidx.lifecycle.ViewModel
 import com.example.gomin.BR
+import androidx.databinding.library.baseAdapters.BR
+import androidx.fragment.app.DialogFragment
+import androidx.lifecycle.ViewModel
 
 abstract class BaseDialog<B : ViewDataBinding>(@LayoutRes private val layoutResId: Int) : DialogFragment() {
     lateinit var binding: B
@@ -37,4 +40,6 @@ abstract class BaseDialog<B : ViewDataBinding>(@LayoutRes private val layoutResI
     }
 
     open fun observeEvent(){}
+    }
+
 }

@@ -1,18 +1,32 @@
 package com.example.gomin.ui
 
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import com.example.gomin.R
+import com.example.gomin.base.BaseFragment
+import com.example.gomin.databinding.FragmentGominBinding
+import com.example.gomin.viewmodel.GominViewModel
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class GominFragment : Fragment() {
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_gomin, container, false)
+class GominFragment : BaseFragment<FragmentGominBinding>(R.layout.fragment_gomin) {
+
+    override val vm : GominViewModel by viewModel()
+
+    private val GominWriteDialog by lazy {
+        GominUploadDialog(vm)
+    }
+
+    private fun GominWriteDialog() {
+        GominWriteDialog.show(
+            requireActivity().supportFragmentManager,
+            "finishDialog"
+        )
+    }
+
+    override fun observeEvent() {
+        vm.run {
+            binding.floatingBtn.setOnClickListener {
+                GominWriteDialog()
+            }
+        }
+
     }
 }
