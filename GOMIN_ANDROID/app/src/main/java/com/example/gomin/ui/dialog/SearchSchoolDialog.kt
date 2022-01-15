@@ -20,6 +20,9 @@ class SearchSchoolDialog(override val vm: RegisterViewModel) :
                 vm?.searchSchool(it)
             }
         }
+        vm.closeDialog.observe(this, {
+            dismiss()
+        })
     }
 
     private fun TextView.observeInputText(doOnInput: (name: String) -> Unit) {
