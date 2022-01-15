@@ -15,10 +15,19 @@ class MyPageFragment : BaseFragment<FragmentMypageBinding>(R.layout.fragment_myp
         binding.gominCountCl.setOnClickListener {
             startMyGomins()
         }
+
+        binding.mypageProfileCl.setOnClickListener {
+            startEditProfile()
+        }
     }
 
     private fun startMyGomins() {
         val intent = Intent(requireContext(), MyGominsActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun startEditProfile() {
+        val intent = Intent(requireContext(), EditInfoActivity::class.java)
         startActivity(intent)
     }
 

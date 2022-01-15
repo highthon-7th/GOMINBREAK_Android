@@ -29,11 +29,11 @@
         <de.hdodenhof.circleimageview.CircleImageView
             android:layout_width="64dp"
             android:layout_height="64dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/edit_tb"
             android:layout_marginTop="30dp"
-            app:glide_image_load="test" />
+            app:glide_image_load="test"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edit_tb" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
