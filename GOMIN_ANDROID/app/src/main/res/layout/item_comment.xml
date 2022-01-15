@@ -28,7 +28,7 @@
             android:layout_height="40dp"
             android:src="@color/gomin_red"
             app:civ_border_color="#000000"
-            app:civ_border_width="1dp"
+            app:civ_border_width="0.2dp"
             android:layout_marginLeft="20dp"
             app:layout_constraintBottom_toBottomOf="@+id/view4"
             app:layout_constraintStart_toStartOf="parent"
@@ -37,15 +37,26 @@
         <EditText
             android:id="@+id/editTextTextPersonName3"
             android:layout_width="0dp"
-            android:layout_marginRight="20dp"
             android:layout_height="0dp"
             android:ems="10"
-            android:inputType="textPersonName"
             android:fontFamily="@font/notosans1"
             android:hint="댓글달기"
+            android:inputType="textPersonName"
+            android:textSize="10dp"
             app:layout_constraintBottom_toBottomOf="@+id/view4"
-            app:layout_constraintEnd_toEndOf="@+id/view4"
+            app:layout_constraintEnd_toStartOf="@+id/imageView4"
             app:layout_constraintStart_toEndOf="@+id/profile_image"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/view4"
+            app:layout_constraintEnd_toEndOf="@+id/view4"
+            app:layout_constraintTop_toTopOf="@+id/view4"
+            app:srcCompat="@drawable/ic_baseline_favorite_border_24" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

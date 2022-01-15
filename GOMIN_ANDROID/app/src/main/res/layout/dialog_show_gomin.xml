@@ -65,6 +65,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="TextView"
+                android:textSize="16sp"
                 app:layout_constraintBottom_toTopOf="@+id/guideline7"
                 app:layout_constraintStart_toStartOf="@+id/guideline22"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -81,14 +82,14 @@
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/profile_image"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="20dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:src="@color/gomin_red"
                 app:civ_border_color="#000000"
                 app:civ_border_width="1dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/view2" />
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+                app:layout_constraintEnd_toStartOf="@+id/guideline22"
+                app:layout_constraintTop_toTopOf="@+id/guideline8" />
 
 
             <androidx.constraintlayout.widget.Guideline
@@ -106,16 +107,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/view2" />
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/comment_img"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="20dp"
-                android:src="@color/gomin_red"
-                app:civ_border_color="#000000"
-                app:civ_border_width="1dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/view2" />
 
             <EditText
                 android:id="@+id/editTextTextPersonName3"
@@ -123,10 +114,12 @@
                 android:layout_height="0dp"
                 android:layout_marginRight="20dp"
                 android:ems="10"
+                android:textSize="14sp"
+                android:gravity="center_vertical"
                 android:fontFamily="@font/notosans1"
                 android:hint="댓글달기"
                 android:inputType="textPersonName"
-                app:layout_constraintBottom_toBottomOf="@+id/view4"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout"
                 app:layout_constraintEnd_toEndOf="@+id/view4"
                 app:layout_constraintStart_toEndOf="@+id/profile_image"
                 app:layout_constraintTop_toBottomOf="@+id/view2" />
