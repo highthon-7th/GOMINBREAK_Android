@@ -89,6 +89,13 @@ class RankViewModel : ViewModel() {
                     BR.vm
                 )
             )
+            addAll(studentList.map {
+                RecyclerViewItem(
+                    R.layout.item_rank,
+                    it,
+                    BR.vm
+                )
+            })
         }
     }
 

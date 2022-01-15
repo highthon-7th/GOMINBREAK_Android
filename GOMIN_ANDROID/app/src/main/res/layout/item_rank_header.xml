@@ -26,9 +26,19 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/first_img"
+            app:layout_constraintBottom_toTopOf="@id/first_tv"
+            app:layout_constraintEnd_toEndOf="@id/rank_header_first_iv"
+            app:layout_constraintStart_toStartOf="@id/rank_header_first_iv" />
+
         <TextView
+            android:id="@+id/first_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:text="@{vm.first.name}"
             android:textColor="@color/black"
             android:textSize="16sp"
@@ -36,6 +46,19 @@
             app:layout_constraintStart_toStartOf="@id/rank_header_first_iv"
             app:layout_constraintTop_toBottomOf="@id/rank_header_first_iv"
             tools:text="김재원" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/gomin_red_500"
+            app:gominCount="@{vm.first.count}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/rank_header_first_iv"
+            app:layout_constraintStart_toStartOf="@id/rank_header_first_iv"
+            app:layout_constraintTop_toBottomOf="@id/rank_header_first_iv"
+            tools:text="130개" />
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/rank_header_second_iv"
@@ -49,6 +72,38 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@id/rank_header_first_iv" />
 
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/second_img"
+            app:layout_constraintBottom_toTopOf="@id/second_tv"
+            app:layout_constraintEnd_toEndOf="@id/rank_header_second_iv"
+            app:layout_constraintStart_toStartOf="@id/rank_header_second_iv" />
+
+        <TextView
+            android:id="@+id/second_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@{vm.second.name}"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@id/rank_header_second_iv"
+            app:layout_constraintStart_toStartOf="@id/rank_header_second_iv"
+            app:layout_constraintTop_toBottomOf="@id/rank_header_second_iv"
+            tools:text="김재원" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/gomin_red_500"
+            app:gominCount="@{vm.second.count}"
+            app:layout_constraintEnd_toEndOf="@id/rank_header_second_iv"
+            app:layout_constraintStart_toStartOf="@id/rank_header_second_iv"
+            app:layout_constraintTop_toBottomOf="@id/rank_header_second_iv"
+            tools:text="130개" />
+
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/rank_header_third_iv"
             android:layout_width="64dp"
@@ -60,5 +115,37 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/rank_header_first_iv"
             app:layout_constraintTop_toTopOf="@id/rank_header_first_iv" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/third_img"
+            app:layout_constraintBottom_toTopOf="@id/third_tv"
+            app:layout_constraintEnd_toEndOf="@id/third_tv"
+            app:layout_constraintStart_toStartOf="@id/third_tv" />
+
+        <TextView
+            android:id="@+id/third_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@{vm.third.name}"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@id/rank_header_third_iv"
+            app:layout_constraintStart_toStartOf="@id/rank_header_third_iv"
+            app:layout_constraintTop_toBottomOf="@id/rank_header_third_iv"
+            tools:text="김재원" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/gomin_red_500"
+            app:gominCount="@{vm.first.count}"
+            app:layout_constraintEnd_toEndOf="@id/rank_header_third_iv"
+            app:layout_constraintStart_toStartOf="@id/rank_header_third_iv"
+            app:layout_constraintTop_toBottomOf="@id/rank_header_third_iv"
+            tools:text="130개" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
