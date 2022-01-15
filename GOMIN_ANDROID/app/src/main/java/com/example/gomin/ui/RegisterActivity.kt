@@ -10,6 +10,8 @@ class RegisterActivity : BaseActivity<ActivityRegisterBinding>(R.layout.activity
     override val vm: RegisterViewModel by viewModel()
 
     override fun observeEvent() {
-        TODO("Not yet implemented")
+        binding.registerBackBtn.setOnClickListener {
+            finish()
+        }
     }
 }
