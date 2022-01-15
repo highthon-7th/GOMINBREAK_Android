@@ -13,6 +13,8 @@ class RegisterViewModel(private val repository: LoginRepository): ViewModel() {
 
     val password = MutableLiveData<String>()
 
+    val checkPassword = MutableLiveData<String>()
+
     val schoolName = MutableLiveData<String>()
 
     val doneRegister = SingleLiveEvent<Unit>()
