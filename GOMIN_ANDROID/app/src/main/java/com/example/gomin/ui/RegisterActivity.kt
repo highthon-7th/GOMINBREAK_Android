@@ -19,19 +19,24 @@ class RegisterActivity : BaseActivity<ActivityRegisterBinding>(R.layout.activity
             registerBtn.setOnClickListener {
                 vm?.register()
             }
-            vm?.doneRegister?.observe(this@RegisterActivity, {
+        }
+        vm.run {
+            doneRegister.observe(this@RegisterActivity, {
                 Snackbar.make(binding.root, "회원가입을 완료하였습니다", Snackbar.LENGTH_SHORT).show()
                 finish()
             })
-            vm?.checkPassword?.observe(this@RegisterActivity, {
+
+            checkPassword.observe(this@RegisterActivity, {
                 binding.checkPasswordError.visibility =
-                    if (
-                        !vm?.password?.value.isNullOrEmpty()
-                        && vm?.password?.value == it
-                        && !it.isNullOrEmpty()
-                    ) View.INVISIBLE
-                    else View.VISIBLE
+                    if (isPasswordEntered() && isPasswordDifferent()) View.VISIBLE
+                    else View.INVISIBLE
             })
         }
     }
+
+    private fun isPasswordEntered(): Boolean =
+        !vm.password.value.isNullOrEmpty() && !vm.checkPassword.value.isNullOrEmpty()
+
+    private fun isPasswordDifferent(): Boolean =
+        vm.password.value != vm.checkPassword.value
 }
