@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.ViewModel
+import androidx.navigation.Navigation
+import androidx.navigation.ui.setupWithNavController
 import com.example.gomin.base.BaseActivity
 import com.example.gomin.databinding.ActivityMainBinding
 import com.example.gomin.ui.LoginActivity
@@ -14,8 +16,14 @@ class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
     override val vm: MainViewModel by viewModel()
 
     override fun observeEvent() {
+        binding.mainBottomNv.setupWithNavController(
+            Navigation.findNavController(
+                this,
+                R.id.main_container
+            )
+        )
         vm.startLogin.observe(this, {
-            startLogin()
+            //startLogin()
         })
     }
 
