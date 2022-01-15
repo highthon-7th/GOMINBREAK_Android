@@ -11,7 +11,7 @@ class MyPageViewModel(private val myPageRepository: MyPageRepository) : ViewMode
     private val _myPageInfo = MutableLiveData<MyInfoEntity>()
     val myPageInfo: LiveData<MyInfoEntity> = _myPageInfo
 
-    
+
     fun getMyPageInfo() {
         myPageRepository.getMyPageInfo().subscribe { response ->
             if (response.isSuccessful) {
