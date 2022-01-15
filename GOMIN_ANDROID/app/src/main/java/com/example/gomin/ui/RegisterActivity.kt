@@ -6,6 +6,7 @@ import android.widget.TextView
 import com.example.gomin.R
 import com.example.gomin.base.BaseActivity
 import com.example.gomin.databinding.ActivityRegisterBinding
+import com.example.gomin.ui.dialog.SearchSchoolDialog
 import com.example.gomin.viewmodel.RegisterViewModel
 import com.google.android.material.snackbar.Snackbar
 import com.jakewharton.rxbinding4.widget.textChanges
@@ -22,6 +23,9 @@ class RegisterActivity : BaseActivity<ActivityRegisterBinding>(R.layout.activity
             }
             registerBtn.setOnClickListener {
                 vm?.register()
+            }
+            searchCv.setOnClickListener {
+                SearchSchoolDialog(vm!!).show(supportFragmentManager,"searchSchoolDialog")
             }
         }
         vm.run {
