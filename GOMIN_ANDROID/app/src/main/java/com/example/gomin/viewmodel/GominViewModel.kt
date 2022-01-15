@@ -29,7 +29,9 @@ class GominViewModel(private val gominRepository: GominRepository) : ViewModel()
         gominRepository.showGominListDetail(gominId).subscribe { it ->
             if (it.isSuccessful) {
                 _gominDetailContent.value = it.body()
-
+            }
+            else{
+                //TODO 데이터 로드에 실패함
             }
         }
     }
