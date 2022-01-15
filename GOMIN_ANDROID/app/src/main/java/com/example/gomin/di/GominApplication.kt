@@ -17,7 +17,8 @@ class GominApplication : Application() {
                     mainModule,
                     localModule,
                     myPageModule,
-                    rankModule
+                    rankModule,
+                    editModule
                 )
             )
         }

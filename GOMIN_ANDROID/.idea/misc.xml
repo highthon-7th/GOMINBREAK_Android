@@ -8,14 +8,17 @@
         <entry key="app/src/main/res/drawable/ic_back.xml" value="0.21388888888888888" />
         <entry key="app/src/main/res/drawable/ic_baseline_eco_24.xml" value="0.16510416666666666" />
         <entry key="app/src/main/res/drawable/ic_baseline_error_24.xml" value="0.18425925925925926" />
+        <entry key="app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.21388888888888888" />
+        <entry key="app/src/main/res/drawable/ic_baseline_school_24.xml" value="0.21388888888888888" />
         <entry key="app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.18425925925925926" />
+        <entry key="app/src/main/res/drawable/ic_baseline_vpn_key_24.xml" value="0.21388888888888888" />
         <entry key="app/src/main/res/drawable/ic_edit.xml" value="0.21388888888888888" />
         <entry key="app/src/main/res/drawable/ic_first.xml" value="0.21388888888888888" />
         <entry key="app/src/main/res/drawable/ic_mypage.xml" value="0.16510416666666666" />
         <entry key="app/src/main/res/drawable/ic_rank.xml" value="0.16510416666666666" />
         <entry key="app/src/main/res/drawable/item_rank_header.xml" value="0.21388888888888888" />
         <entry key="app/src/main/res/drawable/selector_bottomic_color.xml" value="0.18425925925925926" />
-        <entry key="app/src/main/res/layout/activity_edit_myinfo.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_edit_myinfo.xml" value="0.25336229655669795" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.2682291666666667" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2572463768115942" />
         <entry key="app/src/main/res/layout/activity_my_gomins.xml" value="0.14895833333333333" />
