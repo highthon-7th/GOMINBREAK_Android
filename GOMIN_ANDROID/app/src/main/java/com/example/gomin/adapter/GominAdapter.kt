@@ -4,20 +4,21 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModel
 import androidx.recyclerview.widget.RecyclerView
+import com.example.gomin.databinding.ItemPickGominBinding
 import com.example.gomin.dto.GominList
 import com.example.gomin.viewmodel.GominViewModel
 
-class GominAdapter(private gominViewModel: GominViewModel) :
+class GominAdapter(private val vm: GominViewModel) :
     RecyclerView.Adapter<GominAdapter.GominViewHolder>() {
 
     private var gomintList = ArrayList<GominList>()
 
-    inner class GominViewHolder(private val binding: UserProjectFinishItemBinding) :
+    inner class GominViewHolder(private val binding: ItemPickGominBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: GominList, position: Int) {
 
-            binding.vm = viewModel
+            binding.vm = vm
             binding.notifyChange()
         }
     }
@@ -29,7 +30,7 @@ class GominAdapter(private gominViewModel: GominViewModel) :
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GominViewHolder {
         val binding =
-            UserProjectFinishItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            ItemPickGominBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return GominViewHolder(binding)
     }
 
