@@ -21,7 +21,16 @@ class GominRepository(private val gominApi: GominApi) {
         gominApi.showGominListDetail(gomin).subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
 
+    fun writeComment(id : String): @NonNull Single<Response<Unit>> =
+        gominApi.writeComment(id).subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+
+    fun symPerson(id : String): @NonNull Single<Response<Unit>> =
+        gominApi.symPerson(id).subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+
     fun gominUpload(gominUp : GominUpload): @NonNull Single<Response<Unit>> =
         gominApi.gominUpload(gominUp).subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
+
 }
