@@ -7,4 +7,8 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="gomin_blue">#D4F5FF</color>
+    <color name="gomin_red">#FFD6D6</color>
+    <color name="gomin_gray">#8B8B8B</color>
 </resources>
