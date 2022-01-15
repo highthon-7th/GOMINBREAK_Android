@@ -23,7 +23,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
             )
         )
         vm.startLogin.observe(this, {
-            //startLogin()
+            startLogin()
         })
     }
 
