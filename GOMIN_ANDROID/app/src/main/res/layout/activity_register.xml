@@ -102,8 +102,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
-            android:hint="아이디를 입력해주세요"
             android:layout_marginTop="10dp"
+            android:hint="아이디를 입력해주세요"
+            android:text="@={vm.userId}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/register_hint_tv" />
@@ -113,6 +114,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:hint="비밀번호를 입력해주세요"
+            android:text="@={vm.password}"
             app:layout_constraintEnd_toEndOf="@id/id_et"
             app:layout_constraintStart_toStartOf="@id/id_et"
             app:layout_constraintTop_toBottomOf="@id/id_et" />
@@ -121,32 +123,46 @@
             android:id="@+id/check_password_et"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="@id/password_et"
+            android:hint="비밀번호 확인"
+            android:text="@={vm.checkPassword}"
             app:layout_constraintEnd_toEndOf="@id/password_et"
-            app:layout_constraintTop_toBottomOf="@id/password_et"
-            android:hint="비밀번호 확인" />
+            app:layout_constraintStart_toStartOf="@id/password_et"
+            app:layout_constraintTop_toBottomOf="@id/password_et" />
+
+        <ImageView
+            android:id="@+id/check_password_error"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/ic_baseline_error_24"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@id/check_password_et"
+            app:layout_constraintEnd_toEndOf="@id/check_password_et"
+            app:layout_constraintTop_toTopOf="@id/check_password_et" />
 
         <EditText
             android:id="@+id/nickname_et"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/check_password_et"
-            app:layout_constraintStart_toStartOf="@id/check_password_et"
+            android:hint="닉네임을 입력해주세요"
+            android:text="@={vm.userName}"
             app:layout_constraintEnd_toEndOf="@id/check_password_et"
-            android:hint="닉네임을 입력해주세요" />
-        
+            app:layout_constraintStart_toStartOf="@id/check_password_et"
+            app:layout_constraintTop_toBottomOf="@id/check_password_et" />
+
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/register_btn"
             android:layout_width="0dp"
             android:layout_height="50dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/nickname_et"
-            android:background="@drawable/button_back_shape"
-            android:layout_marginTop="30dp"
             android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/button_back_shape"
             android:text="회원가입"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nickname_et" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

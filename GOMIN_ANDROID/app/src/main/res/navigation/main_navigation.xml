@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/gomin_fragment">
+    <fragment
+        android:id="@+id/gomin_fragment"
+        android:name="com.example.gomin.ui.GominFragment"
+        android:label="calendarFragment"
+        tools:layout="@layout/fragment_gomin" />
+
+    <fragment
+        android:id="@+id/rank_fragment"
+        android:name="com.example.gomin.ui.RankFragment"
+        android:label="mealFragment"
+        tools:layout="@layout/fragment_rank" />
+
+    <fragment
+        android:id="@+id/mypage_fragment"
+        android:name="com.example.gomin.ui.MyPageFragment"
+        android:label="notifyFragment"
+        tools:layout="@layout/fragment_mypage" />
+</navigation>
