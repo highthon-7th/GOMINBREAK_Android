@@ -16,7 +16,8 @@ class GominApplication : Application() {
                     networkModule,
                     mainModule,
                     localModule,
-                    myPageModule
+                    myPageModule,
+                    rankModule
                 )
             )
         }

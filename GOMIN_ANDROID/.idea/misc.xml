@@ -5,11 +5,15 @@
       <map>
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.16510416666666666" />
         <entry key="app/src/main/res/drawable/button_back_shape.xml" value="0.18425925925925926" />
+        <entry key="app/src/main/res/drawable/ic_back.xml" value="0.21388888888888888" />
         <entry key="app/src/main/res/drawable/ic_baseline_eco_24.xml" value="0.16510416666666666" />
         <entry key="app/src/main/res/drawable/ic_baseline_error_24.xml" value="0.18425925925925926" />
         <entry key="app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.18425925925925926" />
+        <entry key="app/src/main/res/drawable/ic_edit.xml" value="0.21388888888888888" />
+        <entry key="app/src/main/res/drawable/ic_first.xml" value="0.21388888888888888" />
         <entry key="app/src/main/res/drawable/ic_mypage.xml" value="0.16510416666666666" />
         <entry key="app/src/main/res/drawable/ic_rank.xml" value="0.16510416666666666" />
+        <entry key="app/src/main/res/drawable/item_rank_header.xml" value="0.21388888888888888" />
         <entry key="app/src/main/res/drawable/selector_bottomic_color.xml" value="0.18425925925925926" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.2682291666666667" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2572463768115942" />
@@ -19,7 +23,11 @@
         <entry key="app/src/main/res/layout/fragment_gomin.xml" value="0.28229166666666666" />
         <entry key="app/src/main/res/layout/fragment_mypage.xml" value="0.17707824286156632" />
         <entry key="app/src/main/res/layout/fragment_rank.xml" value="0.28229166666666666" />
+        <entry key="app/src/main/res/layout/fragment_school.xml" value="0.2682291666666667" />
+        <entry key="app/src/main/res/layout/fragment_student.xml" value="0.28229166666666666" />
         <entry key="app/src/main/res/layout/item_my_gomin.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/item_rank.xml" value="0.28229166666666666" />
+        <entry key="app/src/main/res/layout/item_rank_header.xml" value="0.28549618320610687" />
         <entry key="app/src/main/res/layout/item_search_school.xml" value="0.28229166666666666" />
         <entry key="app/src/main/res/menu/menu_bottom_navigation.xml" value="0.28229166666666666" />
       </map>
