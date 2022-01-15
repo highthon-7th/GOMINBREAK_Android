@@ -1,5 +1,6 @@
 package com.example.gomin.remote.api
 
+import com.example.gomin.dto.GominDetail
 import com.example.gomin.dto.GominList
 import com.example.gomin.model.SchoolEntity
 import io.reactivex.rxjava3.core.Single
@@ -14,8 +15,8 @@ interface GominApi {
     fun showGominList(): Single<Response<List<GominList>>>
 
     @GET("/gomin/{gomin-id}")
-    fun showGominListDetail(@Query("gomin-id") id : String): Single<Response<GominList>>
+    fun showGominListDetail(@Query("gomin-id") id : String): Single<Response<GominDetail>>
 
     @POST("search/{name}")
-    fun gominUpdate(title :String,content : String): Single<Void>
+    fun gominUpload(title :String,content : String): Single<Void>
 }
