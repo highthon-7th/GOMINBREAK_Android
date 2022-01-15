@@ -39,7 +39,7 @@ class RankViewModel : ViewModel() {
     private val schoolList = arrayListOf(
         Rank("명진중", 157, myungjinImage),
         Rank("화명중", 142, hwamyungImage),
-        Rank("대전고", 130, myungjinImage),
+        Rank("대전고", 130, mirimImage),
         Rank("미림여자정보과학고", 119, mirimImage),
         Rank("대덕소프트웨어마이스터고", 110, daeDuekImage),
         Rank("명진중", 101, myungjinImage),

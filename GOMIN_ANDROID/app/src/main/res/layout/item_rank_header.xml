@@ -16,8 +16,8 @@
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/rank_header_first_iv"
-            android:layout_width="72dp"
-            android:layout_height="72dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             app:civ_border_color="@color/gomin_blue"
             app:civ_border_width="1dp"
             app:glide_image_load="@{vm.first.imageUrl}"
@@ -26,11 +26,12 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/first_img"
-            app:layout_constraintBottom_toTopOf="@id/first_tv"
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="7dp"
+            android:src="@drawable/ic_first"
+            app:layout_constraintBottom_toBottomOf="@+id/first_tv"
             app:layout_constraintEnd_toEndOf="@id/rank_header_first_iv"
             app:layout_constraintStart_toStartOf="@id/rank_header_first_iv" />
 
@@ -48,10 +49,10 @@
             tools:text="김재원" />
 
         <TextView
+            android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:layout_marginBottom="10dp"
             android:textColor="@color/gomin_red_500"
             app:gominCount="@{vm.first.count}"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -73,10 +74,11 @@
             app:layout_constraintTop_toTopOf="@id/rank_header_first_iv" />
 
         <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/second_img"
-            app:layout_constraintBottom_toTopOf="@id/second_tv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="7dp"
+            android:src="@drawable/ic_second"
+            app:layout_constraintBottom_toBottomOf="@+id/second_tv"
             app:layout_constraintEnd_toEndOf="@id/rank_header_second_iv"
             app:layout_constraintStart_toStartOf="@id/rank_header_second_iv" />
 
@@ -94,6 +96,7 @@
             tools:text="김재원" />
 
         <TextView
+            android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
@@ -117,10 +120,11 @@
             app:layout_constraintTop_toTopOf="@id/rank_header_first_iv" />
 
         <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/third_img"
-            app:layout_constraintBottom_toTopOf="@id/third_tv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="7dp"
+            android:src="@drawable/ic_third"
+            app:layout_constraintBottom_toBottomOf="@+id/third_tv"
             app:layout_constraintEnd_toEndOf="@id/third_tv"
             app:layout_constraintStart_toStartOf="@id/third_tv" />
 
@@ -138,11 +142,12 @@
             tools:text="김재원" />
 
         <TextView
+            android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:textColor="@color/gomin_red_500"
-            app:gominCount="@{vm.first.count}"
+            app:gominCount="@{vm.third.count}"
             app:layout_constraintEnd_toEndOf="@id/rank_header_third_iv"
             app:layout_constraintStart_toStartOf="@id/rank_header_third_iv"
             app:layout_constraintTop_toBottomOf="@id/rank_header_third_iv"

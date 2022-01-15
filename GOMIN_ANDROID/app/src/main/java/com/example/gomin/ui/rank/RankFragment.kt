@@ -18,7 +18,6 @@ class RankFragment : BaseFragment<FragmentRankBinding>(R.layout.fragment_rank) {
     override fun observeEvent() {
         binding.rankVp.run {
             adapter = RankAdapter(requireActivity())
-            isUserInputEnabled = false
         }
         TabLayoutMediator(binding.rankTl, binding.rankVp) { tab, position ->
             binding.rankVp.currentItem = binding.rankTl.selectedTabPosition
