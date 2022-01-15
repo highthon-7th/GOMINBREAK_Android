@@ -13,6 +13,10 @@ class MyGominsActivity : BaseActivity<ActivityMyGominsBinding>(R.layout.activity
         binding.myGominTb.setNavigationOnClickListener {
             finish()
         }
-        
+
+        vm.showDetailGominId.observe(this, {
+            //todo show detail
+        })
+
     }
 }
