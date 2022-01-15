@@ -1,6 +1,7 @@
 package com.example.gomin.di.module
 
 import android.util.Log
+import com.example.gomin.intercepter.TokenInterceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.dsl.module
@@ -18,9 +19,12 @@ val networkModule = module {
         }.setLevel(HttpLoggingInterceptor.Level.BODY)
     }
 
+    single { TokenInterceptor(get()) }
+
     single {
         OkHttpClient.Builder()
             .addInterceptor(get<HttpLoggingInterceptor>())
+            .addInterceptor(get<TokenInterceptor>())
             .build()
     }
 

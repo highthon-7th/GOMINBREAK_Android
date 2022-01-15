@@ -35,7 +35,7 @@ class LocalStorage(private val context: Context) {
     @ExperimentalCoroutinesApi
     fun getAccessToken(): String {
         return dataStore(context).data().map {
-            it[ACCESS_TOKEN_KEY] ?: ""
+            "Bearer ${it[ACCESS_TOKEN_KEY] ?: ""}"
         }.blockingFirst()
     }
 
