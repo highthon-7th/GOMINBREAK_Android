@@ -8,11 +8,17 @@ import com.example.gomin.repository.GominRepository
 
 class GominViewModel(private val gominRepository: GominRepository) : ViewModel() {
 
-    private val gominId : String = ""
-
     private val _gominDetailContent = MutableLiveData<GominDetail>()
     val gominDetailContent :  LiveData<GominDetail> get() =  _gominDetailContent
 
+    var gominListSize : String = ""
+
+    private val _clickedGominId = MutableLiveData<String>()
+    val clickedGominId : LiveData<String> get() = _clickedGominId
+
+    fun onClubClicked(gomin :String){
+        _clickedGominId.value = gomin
+    }
 
     private val _gominListObject = MutableLiveData<List<String>>()
     val gominListObject :  LiveData<List<String>> get() = _gominListObject
@@ -21,12 +27,14 @@ class GominViewModel(private val gominRepository: GominRepository) : ViewModel()
         gominRepository.showGominList().subscribe { it ->
             if (it.isSuccessful) {
                 _gominListObject.value = listOf(it.body().toString())
+                //recycler view에 이 List Size 맞춰서
+                gominListSize = _gominListObject.value!!.size.toString()
             }
         }
     }
 
-    fun getGominDetail() {
-        gominRepository.showGominListDetail(gominId).subscribe { it ->
+    fun getGominDetail(gomin :String) {
+        gominRepository.showGominListDetail(gomin).subscribe { it ->
             if (it.isSuccessful) {
                 _gominDetailContent.value = it.body()
             }
