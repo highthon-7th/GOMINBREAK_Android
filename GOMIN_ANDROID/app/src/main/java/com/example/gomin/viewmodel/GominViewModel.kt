@@ -9,19 +9,19 @@ import com.example.gomin.repository.GominRepository
 class GominViewModel(private val gominRepository: GominRepository) : ViewModel() {
 
     private val _gominDetailContent = MutableLiveData<GominDetail>()
-    val gominDetailContent :  LiveData<GominDetail> get() =  _gominDetailContent
+    val gominDetailContent: LiveData<GominDetail> get() = _gominDetailContent
 
-    var gominListSize : String = ""
+    var gominListSize: String = ""
 
     private val _clickedGominId = MutableLiveData<String>()
-    val clickedGominId : LiveData<String> get() = _clickedGominId
+    val clickedGominId: LiveData<String> get() = _clickedGominId
 
-    fun onClubClicked(gomin :String){
+    fun onClubClicked(gomin: String) {
         _clickedGominId.value = gomin
     }
 
     private val _gominListObject = MutableLiveData<List<String>>()
-    val gominListObject :  LiveData<List<String>> get() = _gominListObject
+    val gominListObject: LiveData<List<String>> get() = _gominListObject
 
     fun getGominList() {
         gominRepository.showGominList().subscribe { it ->
@@ -33,13 +33,11 @@ class GominViewModel(private val gominRepository: GominRepository) : ViewModel()
         }
     }
 
-    fun getGominDetail(gomin :String) {
+    fun getGominDetail(gomin: String) {
         gominRepository.showGominListDetail(gomin).subscribe { it ->
             if (it.isSuccessful) {
                 _gominDetailContent.value = it.body()
-            }
-            else{
-                //TODO 데이터 로드에 실패함
+            } else {
             }
         }
     }

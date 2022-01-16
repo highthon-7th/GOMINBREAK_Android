@@ -41,7 +41,6 @@ class GominFragment(override val vm: GominViewModel) : BaseFragment<FragmentGomi
                 GominWriteDialog()
             }
             showRV()
-            getGominDetail()
             getGominList()
         }
 
