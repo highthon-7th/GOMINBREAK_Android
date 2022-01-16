@@ -17,7 +17,9 @@ class SearchSchoolDialog(override val vm: RegisterViewModel) :
                 dismiss()
             }
             searchSchoolEt.observeInputText {
-                vm?.searchSchool(it)
+                if(it.isNotEmpty()){
+                    vm?.searchSchool(it)
+                }
             }
         }
         vm.closeDialog.observe(this, {

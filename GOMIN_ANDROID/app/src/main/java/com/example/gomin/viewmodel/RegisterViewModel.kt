@@ -10,6 +10,8 @@ import com.example.gomin.base.SingleLiveEvent
 import com.example.gomin.model.RegisterEntity
 import com.example.gomin.model.SchoolEntity
 import com.example.gomin.repository.LoginRepository
+import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
+import io.reactivex.rxjava3.schedulers.Schedulers
 
 class RegisterViewModel(private val repository: LoginRepository): ViewModel() {
     val userId = MutableLiveData<String>()
@@ -41,7 +43,8 @@ class RegisterViewModel(private val repository: LoginRepository): ViewModel() {
     }
 
     fun searchSchool(name: String) {
-        repository.searchSchool(name).subscribe { response ->
+        repository.searchSchool(name).subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread()).subscribe { response ->
             if(response.body() != null) {
                 _searchSchoolRecyclerItems.value = response.body()!!.map {
                     RecyclerViewItem(
