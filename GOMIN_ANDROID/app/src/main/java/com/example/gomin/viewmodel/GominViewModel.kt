@@ -20,6 +20,11 @@ class GominViewModel(private val gominRepository: GominRepository) : ViewModel()
         _clickedGominId.value = gomin
     }
 
+    val title = MutableLiveData<String>()
+    val content = MutableLiveData<String>()
+    val user = MutableLiveData<String>()
+
+
     private val _gominListObject = MutableLiveData<List<String>>()
     val gominListObject: LiveData<List<String>> get() = _gominListObject
 
@@ -37,6 +42,9 @@ class GominViewModel(private val gominRepository: GominRepository) : ViewModel()
         gominRepository.showGominListDetail(gomin).subscribe { it ->
             if (it.isSuccessful) {
                 _gominDetailContent.value = it.body()
+                title.value = it.body()!!.gomin_title
+                content.value = it.body()!!.gomin
+                user.value = it.body()!!.gomin_user
             } else {
             }
         }

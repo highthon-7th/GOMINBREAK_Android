@@ -1,17 +1,11 @@
 package com.example.gomin.ui
 
-import android.widget.GridLayout
-import androidx.lifecycle.ViewModel
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import androidx.viewpager2.widget.ViewPager2
 import com.example.gomin.R
 import com.example.gomin.adapter.GominAdapter
 import com.example.gomin.base.BaseFragment
 import com.example.gomin.databinding.FragmentGominBinding
 import com.example.gomin.viewmodel.GominViewModel
-import com.google.android.material.tabs.TabLayoutMediator
-import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class GominFragment(override val vm: GominViewModel) : BaseFragment<FragmentGominBinding>(R.layout.fragment_gomin) {
 
@@ -42,6 +36,7 @@ class GominFragment(override val vm: GominViewModel) : BaseFragment<FragmentGomi
             }
             showRV()
             getGominList()
+
         }
 
     }

@@ -6,7 +6,7 @@
     <data>
         <variable
             name="vm"
-            type="com.example.gomin.ui.GominShowDialog"
+            type="com.example.gomin.viewmodel.GominViewModel"
             />
     </data>
 
@@ -64,7 +64,7 @@
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView"
+                android:text="@={vm.title}"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toTopOf="@+id/guideline7"
                 app:layout_constraintStart_toStartOf="@+id/guideline22"
@@ -156,6 +156,25 @@
                         android:orientation="vertical" />
                 </ScrollView>
             </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@={vm.user}"
+                app:layout_constraintStart_toStartOf="@+id/guideline22"
+                app:layout_constraintTop_toTopOf="@+id/guideline7" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="@={vm.content}"
+                app:layout_constraintBottom_toBottomOf="@+id/view2"
+                app:layout_constraintEnd_toStartOf="@+id/guideline6"
+                app:layout_constraintStart_toStartOf="@+id/guideline22"
+                app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

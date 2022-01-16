@@ -18,7 +18,6 @@ class GominShowDialog (override val vm: GominViewModel) :
            imageView3.setOnClickListener {
                dismiss()
            }
-
         }
     }
 }
