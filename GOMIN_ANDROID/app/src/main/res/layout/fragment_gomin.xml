@@ -27,6 +27,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="오늘의 고민"
+            android:fontFamily="@font/notosans3"
+            android:textSize="14dp"
             app:layout_constraintBottom_toBottomOf="@+id/view"
             app:layout_constraintEnd_toEndOf="@+id/view"
             app:layout_constraintStart_toStartOf="parent"
@@ -57,7 +59,8 @@
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:text="오늘도 친구들의 고민이 너무 많아요."
+            android:fontFamily="@font/notosans3"
             app:layout_constraintStart_toStartOf="@+id/guideline2"
             app:layout_constraintTop_toTopOf="@+id/guideline4" />
 
@@ -65,18 +68,20 @@
             android:id="@+id/textView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:textSize="12dp"
+            android:text="친구들의 고민을 해결해주세요!"
             app:layout_constraintStart_toStartOf="@+id/guideline2"
             app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerview"
             android:layout_width="0dp"
-            android:layout_height="500dp"
+            android:layout_height="450dp"
             app:layout_constraintEnd_toStartOf="@+id/guideline3"
             app:layout_constraintStart_toStartOf="@+id/guideline2"
             app:layout_constraintTop_toBottomOf="@+id/textView5"
             tools:ignore="SpeakableTextPresentCheck"
+            tools:itemCount="4"
             tools:listitem="@layout/item_pick_gomin">
 
         </androidx.recyclerview.widget.RecyclerView>
