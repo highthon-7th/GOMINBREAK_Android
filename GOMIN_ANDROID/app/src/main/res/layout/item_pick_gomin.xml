@@ -6,10 +6,15 @@
         <variable
             name="vm"
             type="com.example.gomin.viewmodel.GominViewModel" />
+
+        <variable
+            name="gomin_num"
+            type="String" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
+        android:onClick="@{()->vm.onClubClicked(gomin_num)}"
         android:layout_height="wrap_content">
 
         <ImageView
