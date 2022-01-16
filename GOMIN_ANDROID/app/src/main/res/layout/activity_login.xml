@@ -63,6 +63,7 @@
             android:layout_marginHorizontal="70dp"
             android:hint="비밀번호"
             android:imeOptions="actionDone"
+            android:inputType="textPassword"
             android:singleLine="true"
             android:text="@={vm.password}"
             app:layout_constraintBottom_toBottomOf="parent"

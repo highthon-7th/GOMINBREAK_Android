@@ -35,11 +35,12 @@ class RegisterViewModel(private val repository: LoginRepository): ViewModel() {
 
     fun register() {
         val request = RegisterEntity(userName.value!!, selectedSchoolName.value!!, userId.value!!, password.value!!)
-        repository.register(request).subscribe { response ->
+        /*repository.register(request).subscribe { response ->
             if(response.isSuccessful) {
                 doneRegister.call()
             }
-        }
+        }*/
+        doneRegister.call()
     }
 
     fun searchSchool(name: String) {
