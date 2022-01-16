@@ -6,9 +6,10 @@ import com.example.gomin.adapter.GominAdapter
 import com.example.gomin.base.BaseFragment
 import com.example.gomin.databinding.FragmentGominBinding
 import com.example.gomin.viewmodel.GominViewModel
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class GominFragment(override val vm: GominViewModel) : BaseFragment<FragmentGominBinding>(R.layout.fragment_gomin) {
-
+class GominFragment : BaseFragment<FragmentGominBinding>(R.layout.fragment_gomin) {
+    override val vm: GominViewModel by viewModel()
     private val RVAdapter by lazy { GominAdapter(vm) }
 
     private val GominWriteDialog by lazy {

@@ -30,7 +30,7 @@ val networkModule = module {
 
     single {
         Retrofit.Builder()
-            .baseUrl("https://api.smoothbear.me")
+            .baseUrl("http://3.34.194.18:8080")
             .client(get())
             .addConverterFactory(GsonConverterFactory.create())
             .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
